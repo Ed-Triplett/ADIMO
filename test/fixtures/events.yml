@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order: MyString
+  begin_date: 1
+  earliest_begin_date: 1
+  latest_begin_date: 1
+  end_date: 1
+  earliest_end_date: 1
+  latest_end_date: 1
+  building_type: MyString
+  event_type: MyString
+  Note: MyString
+
+two:
+  order: MyString
+  begin_date: 1
+  earliest_begin_date: 1
+  latest_begin_date: 1
+  end_date: 1
+  earliest_end_date: 1
+  latest_end_date: 1
+  building_type: MyString
+  event_type: MyString
+  Note: MyString

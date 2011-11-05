@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: 
+  plan: MyString
+  note: MyText
+
+two:
+  type: 
+  plan: MyString
+  note: MyText

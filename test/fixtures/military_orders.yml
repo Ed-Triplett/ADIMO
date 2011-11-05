@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  origin_date: 1
+  dissolution_date: 1
+  note: MyText
+
+two:
+  name: MyString
+  origin_date: 1
+  dissolution_date: 1
+  note: MyText

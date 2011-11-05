@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  relationship_to_settlement: MyString
+  plan_type: MyString
+  monastic_buildings: MyString
+
+two:
+  relationship_to_settlement: MyString
+  plan_type: MyString
+  monastic_buildings: MyString

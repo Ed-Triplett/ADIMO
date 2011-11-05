@@ -1,0 +1,2 @@
+module MonasticMetadataHelper
+end
