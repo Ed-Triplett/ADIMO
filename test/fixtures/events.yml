@@ -8,7 +8,6 @@ one:
   end_date: 1
   earliest_end_date: 1
   latest_end_date: 1
-  building_type: MyString
   event_type: MyString
   Note: MyString
 
@@ -20,6 +19,5 @@ two:
   end_date: 1
   earliest_end_date: 1
   latest_end_date: 1
-  building_type: MyString
   event_type: MyString
   Note: MyString

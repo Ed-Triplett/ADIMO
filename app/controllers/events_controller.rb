@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  layout :application
   active_scaffold :event do |conf|
     config.label = "Occupation or Construction Event"
     config.columns = [:event_type, :military_order, :building_type, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]

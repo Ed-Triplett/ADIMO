@@ -1,5 +1,7 @@
 Adimo::Application.routes.draw do
 
+  resources :building_types do as_routes end
+
   resources :church_metadata do as_routes end
 
   resources :monastic_metadata do as_routes end
@@ -15,6 +17,9 @@ Adimo::Application.routes.draw do
   resources :buildings do as_routes end
 
   resources :sites do as_routes end
+
+  root :to => 'sites#index'
+  #index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
