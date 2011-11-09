@@ -1,24 +1,30 @@
 Adimo::Application.routes.draw do
 
-  resources :building_types do as_routes end
+  #resources :building_types do as_routes end
 
-  resources :church_metadata do as_routes end
+  #resources :church_metadata do as_routes end
 
-  resources :monastic_metadata do as_routes end
+  #resources :monastic_metadata do as_routes end
 
-  resources :fortress_metadata do as_routes end
+  #resources :fortress_metadata do as_routes end
 
-  resources :military_orders do as_routes end
+  #resources :military_orders do as_routes end
 
-  resources :patrons do as_routes end
+  #resources :patrons do as_routes end
 
-  resources :events do as_routes end
+  #resources :events do as_routes end
 
-  resources :buildings do as_routes end
+  resources :sites do 
+    as_routes 
+    collection do 
+      get 'start' 
+    end
 
-  resources :sites do as_routes end
+  #resources :buildings do as_routes end
 
   root :to => 'sites#index'
+  end
+
   #index'
 
   # The priority is based upon order of creation:
