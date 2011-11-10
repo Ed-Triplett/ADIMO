@@ -1,7 +1,6 @@
 class CreateEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.string :order
       t.integer :begin_date
       t.integer :earliest_begin_date
       t.integer :latest_begin_date

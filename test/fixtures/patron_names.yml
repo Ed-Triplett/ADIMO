@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  patron_name: MyString
+
+two:
+  patron_name: MyString

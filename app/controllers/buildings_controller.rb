@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+  layout 'application'
   active_scaffold :building do |conf|
   conf.label = "buildings"
   conf.columns = [:name, :latitude, :longitude, :topography, :note]

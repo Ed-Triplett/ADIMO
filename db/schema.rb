@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105141105) do
+ActiveRecord::Schema.define(:version => 20111109144924) do
 
   create_table "building_types", :force => true do |t|
     t.string   "type"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20111105141105) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sites_id"
   end
 
 end
