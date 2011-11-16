@@ -1,6 +1,5 @@
 class Site < ActiveRecord::Base
-  has_many :building
+  has_many :buildings
   validates :name, :presence => true
   validates :principality, :presence => true
-  validates :site, :validation_callback
 end

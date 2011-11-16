@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105141105) do
+ActiveRecord::Schema.define(:version => 20111109235057) do
+
+  create_table "building_topographies", :force => true do |t|
+    t.string   "building_topography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "building_types", :force => true do |t|
     t.string   "type"
@@ -38,8 +44,19 @@ ActiveRecord::Schema.define(:version => 20111105141105) do
     t.datetime "updated_at"
   end
 
+  create_table "churchmeta_types", :force => true do |t|
+    t.string   "churchmeta_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_types", :force => true do |t|
+    t.string   "event_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "events", :force => true do |t|
-    t.string   "order"
     t.integer  "begin_date"
     t.integer  "earliest_begin_date"
     t.integer  "latest_begin_date"
@@ -49,6 +66,24 @@ ActiveRecord::Schema.define(:version => 20111105141105) do
     t.string   "building_type"
     t.string   "event_type"
     t.string   "Note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fortmeta_monast_blgs", :force => true do |t|
+    t.string   "fortmeta_monast_bldgs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fortmeta_plantypes", :force => true do |t|
+    t.string   "fortmeta_plantype"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fortmeta_settlements", :force => true do |t|
+    t.string   "fortmeta_settlement"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,9 +105,51 @@ ActiveRecord::Schema.define(:version => 20111105141105) do
     t.datetime "updated_at"
   end
 
+  create_table "milorders_names", :force => true do |t|
+    t.string   "order_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "monastic_metadata", :force => true do |t|
     t.string   "buildings"
     t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "monastmeta_bldgs", :force => true do |t|
+    t.string   "monastmeta_bldgs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_names", :force => true do |t|
+    t.string   "order_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patron_dates", :force => true do |t|
+    t.string   "patron_dates"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patron_kingdoms", :force => true do |t|
+    t.string   "patron_kingdom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patron_names", :force => true do |t|
+    t.string   "patron_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patron_types", :force => true do |t|
+    t.string   "patron_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -84,6 +161,12 @@ ActiveRecord::Schema.define(:version => 20111105141105) do
     t.integer  "reign_ends"
     t.string   "kingdom"
     t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "site_principalities", :force => true do |t|
+    t.string   "principality_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

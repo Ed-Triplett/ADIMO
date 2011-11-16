@@ -1,29 +1,55 @@
 Adimo::Application.routes.draw do
 
-  #resources :building_types do as_routes end
+  resources :milorders_names do as_routes end
 
-  #resources :church_metadata do as_routes end
+  resources :monastmeta_bldgs do as_routes end
 
-  #resources :monastic_metadata do as_routes end
+  resources :churchmeta_types do as_routes end
 
-  #resources :fortress_metadata do as_routes end
+  resources :fortmeta_monast_blgs do as_routes end
 
-  #resources :military_orders do as_routes end
+  resources :fortmeta_plantypes do as_routes end
 
-  #resources :patrons do as_routes end
+  resources :fortmeta_settlements do as_routes end
 
-  #resources :events do as_routes end
+  resources :order_names do as_routes end
 
-  resources :sites do 
-    as_routes 
-    collection do 
-      get 'start' 
-    end
+  resources :patron_dates do as_routes end
 
-  #resources :buildings do as_routes end
+  resources :patron_kingdoms do as_routes end
+
+  resources :patron_types do as_routes end
+
+  resources :patron_names do as_routes end
+
+  resources :event_types do as_routes end
+
+  resources :building_topographies do as_routes end
+
+  resources :site_names do as_routes end
+
+  resources :site_principalities do as_routes end
+
+  resources :building_types do as_routes end
+
+  resources :church_metadata do as_routes end
+
+  resources :monastic_metadata do as_routes end
+
+  resources :fortress_metadata do as_routes end
+
+  resources :military_orders do as_routes end
+
+  resources :patrons do as_routes end
+
+  resources :events do as_routes end
+
+  resources :sites do as_routes end
+
+  resources :buildings do as_routes end
 
   root :to => 'sites#index'
-  end
+
 
   #index'
 
@@ -83,4 +109,4 @@ Adimo::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-end
+  end

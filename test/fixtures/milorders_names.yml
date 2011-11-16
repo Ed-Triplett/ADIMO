@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_name: MyString
+
+two:
+  order_name: MyString

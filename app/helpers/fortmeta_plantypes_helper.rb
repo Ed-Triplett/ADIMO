@@ -1,0 +1,2 @@
+module FortmetaPlantypesHelper
+end

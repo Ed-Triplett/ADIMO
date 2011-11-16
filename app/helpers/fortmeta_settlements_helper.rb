@@ -1,0 +1,2 @@
+module FortmetaSettlementsHelper
+end

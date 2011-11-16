@@ -1,0 +1,2 @@
+module PatronKingdomsHelper
+end

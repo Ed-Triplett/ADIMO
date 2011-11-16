@@ -1,0 +1,2 @@
+module MonastmetaBldgsHelper
+end
