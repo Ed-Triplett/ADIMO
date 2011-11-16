@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109235057) do
+ActiveRecord::Schema.define(:version => 20111116101200) do
 
   create_table "building_topographies", :force => true do |t|
     t.string   "building_topography"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "buildings_id"
   end
 
   create_table "building_types", :force => true do |t|
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "buildings", :force => true do |t|
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sites_id"
   end
 
   create_table "church_metadata", :force => true do |t|
@@ -42,18 +45,21 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "churchmeta_types", :force => true do |t|
     t.string   "churchmeta_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "church_metadata_id"
   end
 
   create_table "event_types", :force => true do |t|
     t.string   "event_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "events", :force => true do |t|
@@ -68,24 +74,28 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.string   "Note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "buildings_id"
   end
 
   create_table "fortmeta_monast_blgs", :force => true do |t|
     t.string   "fortmeta_monast_bldgs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortmeta_plantypes", :force => true do |t|
     t.string   "fortmeta_plantype"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortmeta_settlements", :force => true do |t|
     t.string   "fortmeta_settlement"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortress_metadata", :force => true do |t|
@@ -94,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.string   "monastic_buildings"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "military_orders", :force => true do |t|
@@ -103,12 +114,14 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "milorders_names", :force => true do |t|
     t.string   "order_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "military_order"
   end
 
   create_table "monastic_metadata", :force => true do |t|
@@ -116,42 +129,49 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "monastmeta_bldgs", :force => true do |t|
     t.string   "monastmeta_bldgs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "monastic_metadata"
   end
 
   create_table "order_names", :force => true do |t|
     t.string   "order_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "orders_id"
   end
 
   create_table "patron_dates", :force => true do |t|
     t.string   "patron_dates"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patrons_id"
   end
 
   create_table "patron_kingdoms", :force => true do |t|
     t.string   "patron_kingdom"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patrons_id"
   end
 
   create_table "patron_names", :force => true do |t|
     t.string   "patron_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patrons_id"
   end
 
   create_table "patron_types", :force => true do |t|
     t.string   "patron_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patrons_id"
   end
 
   create_table "patrons", :force => true do |t|
@@ -163,12 +183,14 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "events_id"
   end
 
   create_table "site_principalities", :force => true do |t|
     t.string   "principality_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sites_id"
   end
 
   create_table "sites", :force => true do |t|
