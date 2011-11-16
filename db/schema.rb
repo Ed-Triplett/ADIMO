@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20111116101200) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sites_id"
+    t.integer  "site_id"
   end
 
   create_table "church_metadata", :force => true do |t|
@@ -190,7 +190,7 @@ ActiveRecord::Schema.define(:version => 20111116101200) do
     t.string   "principality_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sites_id"
+    t.integer  "site_id"
   end
 
   create_table "sites", :force => true do |t|

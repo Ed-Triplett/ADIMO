@@ -1,6 +1,6 @@
 class AddForeignKey < ActiveRecord::Migration
   def up
-    add_column :buildings, :sites_id, :integer
+    add_column :buildings, :site_id, :integer
     add_column :events, :buildings_id, :integer
     add_column :patrons, :events_id, :integer
     add_column :military_orders, :events_id, :integer
@@ -8,7 +8,7 @@ class AddForeignKey < ActiveRecord::Migration
     add_column :monastic_metadata, :events_id, :integer
     add_column :fortress_metadata, :events_id, :integer
     add_column :church_metadata, :events_id, :integer
-    add_column :site_principalities, :sites_id, :integer
+    add_column :site_principalities, :site_id, :integer
     add_column :building_topographies, :buildings_id, :integer
     add_column :event_types, :events_id, :integer
     add_column :patron_names, :patrons_id, :integer
