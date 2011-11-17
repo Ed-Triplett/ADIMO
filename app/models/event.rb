@@ -1,7 +1,11 @@
 class Event < ActiveRecord::Base
-  belongs_to :buildings
+  belongs_to :building
   has_one :patron
   has_one :military_order
-  has_one :building_type
-  has_one :event_type
+  belongs_to :building_type
+  belongs_to :event_type
+  
+  def to_label
+    "Event"
+  end
 end

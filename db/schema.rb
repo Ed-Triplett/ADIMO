@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,19 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109235057) do
+ActiveRecord::Schema.define(:version => 20111117190923) do
 
   create_table "building_topographies", :force => true do |t|
     t.string   "building_topography"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "building_id"
   end
 
   create_table "building_types", :force => true do |t|
-    t.string   "type"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.string   "building_type"
   end
 
   create_table "buildings", :force => true do |t|
@@ -34,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
+    t.integer  "building_topography_id"
   end
 
   create_table "church_metadata", :force => true do |t|
@@ -42,18 +45,23 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "building_type_id"
+    t.integer  "churchmeta_type_id"
   end
 
   create_table "churchmeta_types", :force => true do |t|
     t.string   "churchmeta_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "church_metadata_id"
   end
 
   create_table "event_types", :force => true do |t|
     t.string   "event_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
   end
 
   create_table "events", :force => true do |t|
@@ -65,27 +73,33 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.integer  "latest_end_date"
     t.string   "building_type"
     t.string   "event_type"
-    t.string   "Note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "building_id"
+    t.string   "note"
+    t.integer  "building_type_id"
+    t.integer  "event_type_id"
   end
 
   create_table "fortmeta_monast_blgs", :force => true do |t|
     t.string   "fortmeta_monast_bldgs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortmeta_plantypes", :force => true do |t|
     t.string   "fortmeta_plantype"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortmeta_settlements", :force => true do |t|
     t.string   "fortmeta_settlement"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fortress_metadata_id"
   end
 
   create_table "fortress_metadata", :force => true do |t|
@@ -94,6 +108,11 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.string   "monastic_buildings"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "fortmeta_settlement_id"
+    t.integer  "fortmeta_plantype_id"
+    t.integer  "fortmeta_monast_bldg_id"
+    t.integer  "building_type_id"
   end
 
   create_table "military_orders", :force => true do |t|
@@ -103,12 +122,14 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
   end
 
   create_table "milorders_names", :force => true do |t|
     t.string   "order_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "military_order_id"
   end
 
   create_table "monastic_metadata", :force => true do |t|
@@ -116,42 +137,51 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "building_type_id"
+    t.integer  "monastmeta_bldg_id"
   end
 
   create_table "monastmeta_bldgs", :force => true do |t|
     t.string   "monastmeta_bldgs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "monastic_metadata_id"
   end
 
   create_table "order_names", :force => true do |t|
     t.string   "order_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order_id"
   end
 
   create_table "patron_dates", :force => true do |t|
     t.string   "patron_dates"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patron_id"
   end
 
   create_table "patron_kingdoms", :force => true do |t|
     t.string   "patron_kingdom"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patron_id"
   end
 
   create_table "patron_names", :force => true do |t|
     t.string   "patron_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patron_id"
   end
 
   create_table "patron_types", :force => true do |t|
     t.string   "patron_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patron_id"
   end
 
   create_table "patrons", :force => true do |t|
@@ -163,12 +193,18 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "patron_name_id"
+    t.integer  "patron_type_id"
+    t.integer  "patron_kingdom_id"
+    t.integer  "patron_date_id"
   end
 
   create_table "site_principalities", :force => true do |t|
     t.string   "principality_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
   end
 
   create_table "sites", :force => true do |t|
@@ -177,6 +213,7 @@ ActiveRecord::Schema.define(:version => 20111109235057) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_principality_id"
   end
 
 end

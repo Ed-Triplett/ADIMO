@@ -1,6 +1,7 @@
 class FortressMetadatum < ActiveRecord::Base
+  set_table_name 'fortress_metadata'
   belongs_to :building_type
-  has_one :fortmeta_monast_blg
-  has_one :fortmeta_plantype
-  has_one :fortmeta_settlement
+  belongs_to :fortmeta_monast_blg
+  belongs_to :fortmeta_plantype
+  belongs_to :fortmeta_settlement
 end
