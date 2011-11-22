@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     conf.columns[:earliest_end_date].label = "Earliest End Date"
     conf.columns[:latest_end_date].label = "Latest End Date"
     conf.columns[:event_type].actions_for_association_links = [:show]
-    conf.columns[:military_order].actions_for_association_links = [:show]
+    # conf.columns[:military_order].actions_for_association_links = [:show]
     # conf.columns[:building_type].actions_for_association_links = [:show]
     conf.columns[:patron].form_ui = :select
   end
