@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117190923) do
+ActiveRecord::Schema.define(:version => 20111122195626) do
 
   create_table "building_topographies", :force => true do |t|
     t.string   "building_topography"
@@ -113,6 +113,10 @@ ActiveRecord::Schema.define(:version => 20111117190923) do
     t.integer  "fortmeta_plantype_id"
     t.integer  "fortmeta_monast_bldg_id"
     t.integer  "building_type_id"
+    t.integer  "fortmeta_plan_type_id"
+    t.integer  "fortmeta_monast_bldgs_id"
+    t.integer  "formeta_settlement_id"
+    t.integer  "fortmeta_monast_blg_id"
   end
 
   create_table "military_orders", :force => true do |t|
@@ -123,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20111117190923) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
+    t.integer  "milorders_name_id"
   end
 
   create_table "milorders_names", :force => true do |t|
@@ -140,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20111117190923) do
     t.integer  "event_id"
     t.integer  "building_type_id"
     t.integer  "monastmeta_bldg_id"
+    t.integer  "monastmeta_bldgs_id"
   end
 
   create_table "monastmeta_bldgs", :force => true do |t|

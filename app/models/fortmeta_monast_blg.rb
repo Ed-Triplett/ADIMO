@@ -1,5 +1,5 @@
 class FortmetaMonastBlg < ActiveRecord::Base
   def to_label
-    "#{fortmonast_bld}"
+    "#{fortmeta_monast_bldgs}"
   end
 end
