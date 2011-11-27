@@ -47,3 +47,62 @@ Unfortified Church
 Cathedral'.split("\n").each do |o|
  ChurchmetaType.find_or_create_by_churchmeta_type o
 end
+
+"Alfonso VII (1126-1157) Leon-Castile
+Sancho III (1157-1158) Castile
+Alfonso VIII (1158-1214) Castile
+Enrique I (1214-1217) Castile
+Fernando III (1217-1252) Leon-Castile
+Alfonso X (1252-1284) Leon-Castile
+Sancho IV (1284-1295) Leon-Castile
+Fernando IV (1295-1312) Leon-Castile
+Alfonso XI (1312-1350) Leon-Castile
+Pedro the Cruel (1350-1369) Leon-Castile
+Enrique II (1369-1379) Leon-Castile
+Juan I (1379-1390) Leon-Castile
+Enrique III (1390-1406) Leon-Castile
+Alfonso I The Battler (1104-1134) Aragon
+Ramiro II (1134-1137) Aragon
+Ramon Berenguer IV (1131-1162) Catalonia / Catalonia-Aragon
+Alfonso II (1162-1196) Aragon-Catalonia
+Pedro II (1196-1213) Aragon
+Jaime I (1213-1276) Aragon
+Pedro III (1276-1285) Aragon
+Alfonso III (1285-1291) Aragon
+Jaime II (1291-1327) Aragon
+Alfonso IV (1336-1387) Aragon
+Juan I (1387-1395) Aragon
+Martin the Humane (1395-1410) Aragon
+Alfonso I Henriques (1128-1185) Portugal
+Sancho I (1185-1211) Portugal
+Alfonso II (1211-1223) Portugal
+Sancho II (1223-1248) Portugal
+Alfonso III (1248-1279) Portugal
+Dinis (1279-1325) Portugal
+Alfonso IV (1325-1357) Portugal
+Pedro (1357-1367) Portugal
+Fernando (1367-1383) Portugal
+Joao I of Avis (1385-1433) Portugal
+Garcia IV Ramirez (1134-1150) Navarre
+Sancho VI (1150-1194) Navarre
+Sancho VII (1194-1234) Navarre
+Thibault I (1234-1253) Navarre
+Thibault II (1253-1270) Navarre
+Henry II (1270-1274) Navarre
+Jeanne I (1274-1305) Navarre
+Fernando II (1157-1188) Leon
+Alfonso IX (1188- 1230) Leon".split("\n").each do |o|
+  name = o.split('(')[0].strip
+  start = o.split('(')[1].split('-')[0]
+  stop = o.split('(')[1].split('-')[1].split(')')[0].strip
+  place = o.split('(')[1].split('-')[1].split(')')[1].strip
+  p = Patron.find_or_create_by_name(name)
+  p.reign_begins = start
+  p.reign_ends = stop
+  p.kingdom = place
+  p.save
+end
+
+"Calatrava,Santiago,Templars,Hospitallers,Alcantara,Avis,Montesa".split(',').each do |o|
+  MilordersName.find_or_create_by_order_name(o)
+end

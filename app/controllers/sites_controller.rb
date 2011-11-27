@@ -13,8 +13,15 @@ class SitesController < ApplicationController
     conf.columns[:name].label = "Name"
     conf.columns[:site_principality].label = "Principality"
     conf.columns[:site_principality].form_ui = :select
+    
+    conf.columns[:patrons].actions_for_association_links = [:show]
+    conf.columns[:military_orders].actions_for_association_links = [:show]
+    conf.columns[:events].actions_for_association_links = [:show]
+    conf.columns[:site_principality].actions_for_association_links = [:show]
+    
     list.columns.exclude :notes
     list.sorting = {:name => "ASC"}
+    
   end
 
 end

@@ -7,6 +7,6 @@ class Patron < ActiveRecord::Base
   belongs_to :patron_type
   
   def to_label
-    "#{name} (#{reign_begins} #{reign_ends}) #{kingdom}"
+    "#{name} (#{reign_begins}-#{reign_ends}) #{kingdom}"
   end
 end
