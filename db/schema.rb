@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128175907) do
+ActiveRecord::Schema.define(:version => 20111128180345) do
 
   create_table "architecture_types", :force => true do |t|
     t.string   "architecture_type"
@@ -129,6 +129,11 @@ ActiveRecord::Schema.define(:version => 20111128175907) do
     t.integer  "fortmeta_monast_bldgs_id"
     t.integer  "formeta_settlement_id"
     t.integer  "fortmeta_monast_blg_id"
+  end
+
+  create_table "fortress_metadata_fortmeta_monast_blgs", :id => false, :force => true do |t|
+    t.integer "fortress_metadatum_id"
+    t.integer "fortmeta_monast_blg_id"
   end
 
   create_table "military_orders", :force => true do |t|

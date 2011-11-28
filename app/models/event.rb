@@ -6,6 +6,11 @@ class Event < ActiveRecord::Base
   belongs_to :event_type
   
   def to_label
-    "#{event_type.to_label if event_type != nil}, #{military_order.to_label if military_order}, #{building_type.to_label if building_type != nil}, #{}"
+    str = ''
+    patrons.each do |p|
+      str += ', ' if str != ''
+      str += p.to_label
+    end
+    "#{event_type.to_label if event_type != nil}, #{military_order.to_label if military_order}, #{building_type.to_label if building_type != nil}, #{str}"
   end
 end
