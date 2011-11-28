@@ -1,5 +1,7 @@
 Adimo::Application.routes.draw do
 
+  resources :architecture_types do as_routes end
+
   resources :milorders_names do as_routes end
 
   resources :monastmeta_bldgs do as_routes end

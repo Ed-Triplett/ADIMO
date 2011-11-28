@@ -1,0 +1,2 @@
+module ArchitectureTypesHelper
+end

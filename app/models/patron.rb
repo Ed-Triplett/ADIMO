@@ -1,5 +1,5 @@
 class Patron < ActiveRecord::Base
-  belongs_to :event
+  has_and_belongs_to_many :events
   # belongs_to :patron_date_begin, :class_name => 'PatronDate'
   # belongs_to :patron_date_end, :class_name => 'PatronDate'
   # belongs_to :patron_name

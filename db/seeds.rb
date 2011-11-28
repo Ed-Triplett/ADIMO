@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 'Fortress,Church,Monastery,City Walls,Bridge'.split(',').each do |o|
-  BuildingType.find_or_create_by_building_type o
+  ArchitectureType.find_or_create_by_architecture_type o
 end
 
 

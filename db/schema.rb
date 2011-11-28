@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122195626) do
+ActiveRecord::Schema.define(:version => 20111128151305) do
+
+  create_table "architecture_types", :force => true do |t|
+    t.string   "architecture_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "building_topographies", :force => true do |t|
     t.string   "building_topography"
@@ -25,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20111122195626) do
     t.datetime "updated_at"
     t.integer  "event_id"
     t.string   "building_type"
+    t.integer  "architecture_type_id"
   end
 
   create_table "buildings", :force => true do |t|
@@ -79,6 +86,11 @@ ActiveRecord::Schema.define(:version => 20111122195626) do
     t.string   "note"
     t.integer  "building_type_id"
     t.integer  "event_type_id"
+  end
+
+  create_table "events_patrons", :id => false, :force => true do |t|
+    t.integer "event_id"
+    t.integer "patron_id"
   end
 
   create_table "fortmeta_monast_blgs", :force => true do |t|
