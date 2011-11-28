@@ -23,5 +23,6 @@ class EventsController < ApplicationController
     # conf.columns[:military_order].actions_for_association_links = [:show]
     conf.columns[:patrons].actions_for_association_links = [:show]
     conf.columns[:patrons].form_ui = :select
+    conf.columns[:patrons].options = {:draggable_lists => true}
   end
 end 
