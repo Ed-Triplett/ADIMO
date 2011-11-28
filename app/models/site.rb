@@ -4,7 +4,7 @@ class Site < ActiveRecord::Base
   has_many :military_orders, :through => :events
   has_many :patrons, :through => :events
   
-  has_one :site_principality
+  belongs_to :site_principality
   
   validates :name, :presence => true
   validates :site_principality, :presence => true
