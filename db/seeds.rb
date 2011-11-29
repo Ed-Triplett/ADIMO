@@ -106,3 +106,13 @@ end
 "Calatrava,Santiago,Templars,Hospitallers,Alcantara,Avis,Montesa".split(',').each do |o|
   MilordersName.find_or_create_by_order_name(o)
 end
+
+'Tower Keep
+Large Enclosure Castle
+Quadrangular Castrum'.split("\n").each do |o|
+  FortmetaPlantype.find_or_create_by_fortmeta_plantype(o)
+end
+
+'Occupation,Construction,Order Change'.split(',').each do |o|
+  EventType.find_or_create_by_event_type(o)
+end
