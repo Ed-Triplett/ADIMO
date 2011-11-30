@@ -4,6 +4,6 @@ belongs_to :milorders_name
 validates :origin_date, :presence => true
 validates :dissolution_date, :presence => true
   def to_label
-    "#{milorders_name.to_label if milorders_name != nil}"
+    "#{milorders_name.to_label if milorders_name != nil} (#{origin_date}-#{dissolution_date})"
   end
 end

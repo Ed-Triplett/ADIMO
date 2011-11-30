@@ -14,5 +14,6 @@ class PatronsController < ApplicationController
     # conf.columns[:patron_date_end].form_ui = :select
     # conf.columns[:patron_kingdom].label = 'Kingdom'
     # conf.columns[:patron_kingdom].form_ui = :select
+    # conf.columns[:patron_type].sort_by :sql => 'reign_begins'
   end
 end 

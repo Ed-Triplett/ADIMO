@@ -2,9 +2,9 @@ class EventsController < ApplicationController
   layout 'application'
   active_scaffold :event do |conf|
     conf.label = "Occupation or Construction Event"
-    conf.list.columns= [:event_type, :military_order, :building_type, :patrons, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
-    conf.columns= [:event_type, :patrons, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
-    conf.show.columns= [:event_type, :military_order, :building_type, :patrons, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
+    conf.list.columns= [:event_type, :military_order, :building_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
+    conf.columns= [:event_type, :military_order, :patron_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
+    conf.show.columns= [:event_type, :military_order, :building_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
     conf.list.columns.exclude :note
     conf.list.sorting = {:event_type => 'ASC'}
     conf.columns[:event_type].label = "Event Type"
@@ -20,9 +20,10 @@ class EventsController < ApplicationController
     conf.columns[:earliest_end_date].label = "Earliest End Date"
     conf.columns[:latest_end_date].label = "Latest End Date"
     conf.columns[:event_type].actions_for_association_links = [:show]
-    # conf.columns[:military_order].actions_for_association_links = [:show]
-    conf.columns[:patrons].actions_for_association_links = [:show]
-    conf.columns[:patrons].form_ui = :select
-    conf.columns[:patrons].options = {:draggable_lists => true}
+    conf.columns[:military_order].actions_for_association_links = [:show]
+    conf.columns[:patron].actions_for_association_links = [:show]
+    conf.columns[:patron].form_ui = :select
+    # conf.columns[:patron].options = {:draggable_lists => true}
+    conf.columns[:patron_type].form_ui = :select
   end
 end 
