@@ -1,5 +1,5 @@
 class BuildingType < ActiveRecord::Base
-  has_one :event
+  belongs_to :event
   belongs_to :architecture_type
   has_one :fortress_metadatum
   #has_one :monastic_metadatum

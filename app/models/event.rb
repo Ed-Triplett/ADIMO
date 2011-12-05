@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   # has_and_belongs_to_many :patrons
   belongs_to :patron
   # has_one :military_order
-  belongs_to :building_type
+  has_one :building_type
   belongs_to :event_type
   belongs_to :military_order
   belongs_to :patron_type
