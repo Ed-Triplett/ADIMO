@@ -1,27 +1,27 @@
 class FixForeignKeys < ActiveRecord::Migration
   def up
-    remove_column :buildings, :sites_id, :integer
-    remove_column :events, :buildings_id, :integer
-    remove_column :patrons, :events_id, :integer
-    remove_column :military_orders, :events_id, :integer
-    remove_column :building_types, :events_id, :integer
-    remove_column :monastic_metadata, :events_id, :integer
-    remove_column :fortress_metadata, :events_id, :integer
-    remove_column :church_metadata, :events_id, :integer
-    remove_column :site_principalities, :sites_id, :integer
-    remove_column :building_topographies, :buildings_id, :integer
-    remove_column :event_types, :events_id, :integer
-    remove_column :patron_names, :patrons_id, :integer
-    remove_column :patron_types, :patrons_id, :integer
-    remove_column :patron_kingdoms, :patrons_id, :integer
-    remove_column :patron_dates, :patrons_id, :integer
-    remove_column :order_names, :orders_id, :integer
-    remove_column :fortmeta_settlements, :fortress_metadatum_id, :integer
-    remove_column :fortmeta_plantypes, :fortress_metadatum_id, :integer
-    remove_column :fortmeta_monast_blgs, :fortress_metadatum_id, :integer
-    remove_column :churchmeta_types, :church_metadatum_id, :integer
-    remove_column :monastmeta_bldgs, :monastic_metadatum, :integer
-    remove_column :milorders_names, :military_order, :integer
+    remove_column :buildings, :sites_id
+    remove_column :events, :buildings_id
+    remove_column :patrons, :events_id
+    remove_column :military_orders, :events_id
+    remove_column :building_types, :events_id
+    remove_column :monastic_metadata, :events_id
+    remove_column :fortress_metadata, :events_id
+    remove_column :church_metadata, :events_id
+    remove_column :site_principalities, :sites_id
+    remove_column :building_topographies, :buildings_id
+    remove_column :event_types, :events_id
+    remove_column :patron_names, :patrons_id
+    remove_column :patron_types, :patrons_id
+    remove_column :patron_kingdoms, :patrons_id
+    remove_column :patron_dates, :patrons_id
+    remove_column :order_names, :orders_id
+    remove_column :fortmeta_settlements, :fortress_metadatum_id
+    remove_column :fortmeta_plantypes, :fortress_metadatum_id
+    remove_column :fortmeta_monast_blgs, :fortress_metadatum_id
+    remove_column :churchmeta_types, :church_metadatum_id
+    remove_column :monastmeta_bldgs, :monastic_metadatum
+    remove_column :milorders_names, :military_order
     
     add_column :buildings, :site_id, :integer
     add_column :events, :building_id, :integer
