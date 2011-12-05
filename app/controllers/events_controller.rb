@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   active_scaffold :event do |conf|
     conf.label = "Occupation or Construction Event"
     conf.list.columns= [:event_type, :military_order, :building_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
-    conf.columns= [:event_type, :military_order, :patron_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
+    conf.columns= [:event_type, :military_order, :building_type, :patron_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
     conf.show.columns= [:event_type, :military_order, :building_type, :patron, :begin_date, :earliest_begin_date, :latest_begin_date, :end_date, :earliest_end_date, :latest_end_date, :note]
     conf.list.columns.exclude :note
     conf.list.sorting = {:event_type => 'ASC'}

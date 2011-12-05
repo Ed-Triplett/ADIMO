@@ -36,7 +36,8 @@ Quadrangular Castrum'.split("\n").split("\n").each do |o|
   FortmetaPlantype.find_or_create_by_fortmeta_plantype o
 end
 
-'Calatrava (1157-1808),Santiago (1171-1808),Alcantara (1218-1808),Avis (1223-1834),Templars (1129-1312),Hospitallers (1113-1805),Evora (1176-1223),San Julian del Pereiro (1176-1218),'.split("/n").each do |o|
+'Calatrava (1157-1808),Santiago (1171-1808),Alcantara (1218-1808),Avis (1223-1834),Templars (1129-1312),Montesa (1312-1739),Hospitallers (1113-1805),Evora (1176-1223),San Julian del Pereiro (1176-1218),none,'.split("/n").each do |o|
+  MilordersName.find_or_create_by_order_name(o)
 end
 
 'Three-apse Church
@@ -106,10 +107,6 @@ Alfonso IX (1188- 1230) Leon".split("\n").each do |o|
   p.reign_ends = stop
   p.kingdom = place
   p.save
-end
-
-"Calatrava,Santiago,Templars,Hos pitallers,Alcantara,Avis,Montesa".split(',').each do |o|
-  MilordersName.find_or_create_by_order_name(o)
 end
 
 'Tower Keep
