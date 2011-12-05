@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -87,8 +88,8 @@ ActiveRecord::Schema.define(:version => 20111130132114) do
     t.integer  "building_type_id"
     t.integer  "event_type_id"
     t.integer  "patron_type_id"
-    t.integer  "patron_id"
     t.integer  "military_order_id"
+    t.integer  "patron_id"
   end
 
   create_table "events_patrons", :id => false, :force => true do |t|
