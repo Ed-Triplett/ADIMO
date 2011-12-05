@@ -10,9 +10,9 @@ class EventsController < ApplicationController
     conf.columns[:event_type].label = "Event Type"
     conf.columns[:event_type].form_ui = :select
     conf.columns[:military_order].label = "Military Order"
-    conf.columns[:military_order].form_ui = :select
+    #conf.columns[:military_order].form_ui = :select
     conf.columns[:building_type].label = "Building Type"
-    conf.columns[:building_type].form_ui = :select
+    #conf.columns[:building_type].form_ui = :select
     conf.columns[:begin_date].label = "Begin Date"
     conf.columns[:earliest_begin_date].label = "Earliest Begin Date"
     conf.columns[:latest_begin_date].label = "Latest Begin Date"

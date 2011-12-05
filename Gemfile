@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 gem 'pg',:group=>[:production]
 gem 'sqlite3',:group=>[:development, :test]
-gem 'active_scaffold'
+#gem 'active_scaffold'
 
 
 # Gems used only for assets and not required

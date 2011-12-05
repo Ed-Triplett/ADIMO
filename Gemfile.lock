@@ -46,8 +46,6 @@ GEM
       rack-mount (~> 0.8.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.0.0)
-    active_scaffold (3.1.7)
-      rails (~> 3.1.0)
     activemodel (3.1.0)
       activesupport (= 3.1.0)
       bcrypt-ruby (~> 3.0.0)
@@ -145,7 +143,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  active_scaffold
   active_scaffold_vho!
   coffee-rails (~> 3.1.0)
   jquery-rails_vho!
