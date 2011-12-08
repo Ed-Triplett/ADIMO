@@ -36,8 +36,15 @@ Quadrangular Castrum'.split("\n").split("\n").each do |o|
   FortmetaPlantype.find_or_create_by_fortmeta_plantype o
 end
 
-'Calatrava (1157-1808),Santiago (1171-1808),Alcantara (1218-1808),Avis (1223-1834),Templars (1129-1312),Montesa (1312-1739),Hospitallers (1113-1805),Evora (1176-1223),San Julian del Pereiro (1176-1218),none,'.split(",").each do |o|
-  MilordersName.find_or_create_by_order_name(o)
+'Calatrava (1157-1808),Santiago (1171-1808),Alcantara (1218-1808),Avis (1223-1834),Templars (1129-1312),Montesa (1312-1739),Hospitallers (1113-1805),Evora (1176-1223),San Julian del Pereiro (1176-1218),none (1100-1800)'.split(",").each do |o|
+puts o
+  name = o.split ('(')[0].strip
+  origin_date =o.split('(')[1].split ('-')[0]
+  dissolution_date =o.split('(')[1].split ('-') [1].split (')')[0]
+  mo=MilitaryOrder.find_or_create_by_name(name)
+  #mo.orgin_date=origin_date
+  #mo.dissolution_date=dissolution_date
+  #mo.save
 end
 
 'Three-apse Church
