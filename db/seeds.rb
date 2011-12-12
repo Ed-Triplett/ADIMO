@@ -50,9 +50,9 @@ none (1100-1800)'.split("\n").each do |o|
   origin_date =o.split('(')[1].split ('-')[0]
   dissolution_date =o.split('(')[1].split ('-') [1].split (')')[0]
   mo=MilitaryOrder.find_or_create_by_name(name)
-  #mo.orgin_date=origin_date
-  #mo.dissolution_date=dissolution_date
-  #mo.save
+  mo.origin_date=origin_date
+  mo.dissolution_date=dissolution_date
+  mo.save
 end
 
 'Three-apse Church
