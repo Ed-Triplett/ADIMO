@@ -36,22 +36,22 @@ Quadrangular Castrum'.split("\n").each do |o|
   FortmetaPlantype.find_or_create_by_fortmeta_plantype o
 end
 
-'Calatrava (1157-1808)
-Santiago (1171-1808)
-Alcantara (1218-1808)
-Avis (1223-1834)
-Templars (1129-1312)
-Montesa (1312-1739)
-Hospitallers (1113-1805)
-Evora (1176-1223)
-San Julian del Pereiro (1176-1218)
-none (1100-1800)'.split("\n").each do |o|
-  name = o.split ('(')[0].strip
-  origin_date =o.split('(')[1].split ('-')[0]
-  dissolution_date =o.split('(')[1].split ('-') [1].split (')')[0]
-  mo=MilitaryOrder.find_or_create_by_name(name)
-  mo.origin_date=origin_date
-  mo.dissolution_date=dissolution_date
+MILITARY_ORDER = [
+  { :name => 'Calatrava', :origin_date => 1157, :dissolution_date => 1808 },
+  { :name => 'Santiago', :origin_date => 1171, :dissolution_date => 1808 },
+  { :name => 'Alcantara', :origin_date => 1218, :dissolution_date => 1808 },
+  { :name => 'Avis', :origin_date => 1223, :dissolution_date => 1834 },
+  { :name => 'Templars', :origin_date => 1129, :dissolution_date => 1312 },
+  { :name => 'Montesa', :origin_date => 1312, :dissolution_date => 1739 },
+  { :name => 'Hospitallers', :origin_date => 1113, :dissolution_date => 1805 },
+  { :name => 'Evora', :origin_date => 1176, :dissolution_date => 1223 },
+  { :name => 'San Julian del Pereiro', :origin_date => 1176, :dissolution_date => 1218 },
+  { :name => 'None', :origin_date => 1113, :dissolution_date => 1808 },
+]
+MILITARY_ORDER.each do |o|
+  mo = MilitaryOrder.find_or_create_by_name o[:name]
+  mo.origin_date = o[:origin_date]
+  mo.dissolution_date = o[:dissolution_date]
   mo.save
 end
 
