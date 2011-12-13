@@ -133,3 +133,5 @@ end
 'Occupation,Construction,Order Change'.split(',').each do |o|
   EventType.find_or_create_by_event_type(o)
 end
+
+
