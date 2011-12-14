@@ -2,7 +2,7 @@ class Site < ActiveRecord::Base
   has_many :buildings
   has_many :events, :through => :buildings
   has_many :military_orders, :through => :events
-  #has_many :patrons, :through => :events
+  has_many :patrons, :through => :events
   #has_many :building_types, :through => :buildings
   
   

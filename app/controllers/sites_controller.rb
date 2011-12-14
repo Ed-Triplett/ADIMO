@@ -2,7 +2,7 @@ class SitesController < ApplicationController
   layout 'application'
   active_scaffold :site do |conf|
     conf.label = "Sites"
-    conf.list.columns = [:name, :site_principality, :buildings, :military_orders, :patrons, :events]
+    conf.list.columns = [:name, :site_principality, :buildings, :military_orders, :patrons]
     # conf.columns << :mimilitary_orders
     # conf.columns << :patrons
     # conf.columns << :events
@@ -16,7 +16,7 @@ class SitesController < ApplicationController
     
     conf.columns[:patrons].actions_for_association_links = [:show]
     conf.columns[:military_orders].actions_for_association_links = [:show]
-    conf.columns[:event_types].actions_for_association_links = [:show]
+    conf.columns[:events].actions_for_association_links = [:show]
     conf.columns[:site_principality].actions_for_association_links = [:show]
     
     list.columns.exclude :notes
