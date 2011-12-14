@@ -9,7 +9,7 @@ class SitesController < ApplicationController
     # conf.columns = [:name, :principality, :buildings, :military_order, :patrons, :notes]
     conf.create.columns = [:name, :site_principality, :notes]
     conf.update.columns = [:name, :site_principality, :notes]
-    conf.show.columns = [:name, :site_principality, :buildings, :military_orders, :patrons, :event_types :notes]
+    conf.show.columns = [:name, :site_principality, :buildings, :military_orders, :patrons, :events, :notes]
     conf.columns[:name].label = "Name"
     conf.columns[:site_principality].label = "Principality"
     conf.columns[:site_principality].form_ui = :select
