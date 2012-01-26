@@ -24,4 +24,6 @@ class SitesController < ApplicationController
     
   end
 
+  before_filter :authenticate_user!
+
 end

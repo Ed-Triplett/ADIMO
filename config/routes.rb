@@ -1,5 +1,7 @@
 Adimo::Application.routes.draw do
 
+  devise_for :users
+
   resources :architecture_types do as_routes end
 
   resources :milorders_names do as_routes end

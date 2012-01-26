@@ -11,6 +11,15 @@ class Site < ActiveRecord::Base
   validates :name, :presence => true
   validates :site_principality, :presence => true
   
+  # def authorized_for_update?
+  #   current_user != :false ? true : false
+  # end
+  # def authorized_for_delete?
+  #   current_user != :false ? true : false
+  # end
+  # def authorized_for_create?
+  #   current_user != :false ? true : false
+  # end
   # def military_orders
   #   ""
   # end
