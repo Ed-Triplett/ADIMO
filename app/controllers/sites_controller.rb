@@ -27,14 +27,15 @@ class SitesController < ApplicationController
   # before_filter :authenticate_user!
   def create_authorized?
     # you can also check e.g. :params[:nested] or active_scaffold_constraints[:parent]
-    current_user != nil ? true : false    
+    (current_user != nil and current_user.approved) ? true : false    
   end
   def delete_authorized?(record = nil)
     # you can also check e.g. :params[:nested] or active_scaffold_constraints[:parent]
-    current_user != nil ? true : false    
+    (current_user != nil and current_user.approved) ? true : false    
   end
   def update_authorized?(record = nil)
     # you can also check e.g. :params[:nested] or active_scaffold_constraints[:parent]
-    current_user != nil ? true : false    
+    (current_user != nil and current_user.approved) ? true : false    
   end
+  
 end
