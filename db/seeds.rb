@@ -84,7 +84,7 @@ Juan I (1379-1390) Leon-Castile
 Enrique III (1390-1406) Leon-Castile
 Alfonso I The Battler (1104-1134) Aragon
 Ramiro II (1134-1137) Aragon
-Ramon Berenguer IV (1131-1162) Catalonia / Catalonia-Aragon
+Ramon Berenguer IV (1131-1162) Catalonia-Aragon
 Alfonso II (1162-1196) Aragon-Catalonia
 Pedro II (1196-1213) Aragon
 Jaime I (1213-1276) Aragon
