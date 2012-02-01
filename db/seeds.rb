@@ -116,8 +116,11 @@ Alfonso IX (1188- 1230) Leon".split("\n").each do |o|
   name = o.split('(')[0].strip
   start = o.split('(')[1].split('-')[0]
   stop = o.split('(')[1].split('-')[1].split(')')[0].strip
-  place = o.split('(')[1].split('-')[1].split(')')[1].strip
+  place = o.split(')')[1].strip
   p = Patron.find_or_create_by_name(name)
+  if p.kingdom? && p.kingdom != place
+    p = Patron.new(:name => name)
+  end
   p.reign_begins = start
   p.reign_ends = stop
   p.kingdom = place
