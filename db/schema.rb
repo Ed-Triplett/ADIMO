@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120127121225) do
+ActiveRecord::Schema.define(:version => 20120223164021) do
 
   create_table "architecture_types", :force => true do |t|
     t.string   "architecture_type"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20120127121225) do
 
   create_table "buildings", :force => true do |t|
     t.string   "name"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
     t.string   "topography"
     t.text     "note"
     t.datetime "created_at"
