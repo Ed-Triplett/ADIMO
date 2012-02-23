@@ -11,6 +11,6 @@ class AddLatLonDecimal < ActiveRecord::Migration
 
 #      t.column :latitude, :decimal, {:precision => 8}
  #     t.column :longitude, :decimal, {:precision => 8}
-    end
+    # end
   end
 end
