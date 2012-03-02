@@ -21,9 +21,10 @@ end
 # gem 'jquery-rails'
 gem 'jquery-rails_vho', :git => 'git://github.com/vhochstein/jquery-rails.git'
 gem 'verification', :git => 'git://github.com/beastaugh/verification.git'
-gem 'render_component_vho', :git => 'git://github.com/vhochstein/render_component.git'
-gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.git'
-
+#gem 'render_component_vho', :git => 'git://github.com/vhochstein/render_component.git'
+#gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.git'
+gem 'render_component_vho', '3.1.1'
+gem 'active_scaffold_vho', '3.1.3'
 gem 'devise'
 
 # Use unicorn as the web server
