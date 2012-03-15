@@ -10,6 +10,8 @@ class BuildingsController < ApplicationController
   conf.columns[:building_topography].label = "Topographical Orientation"
   conf.columns[:building_topography].form_ui = :select
   conf.columns[:building_topography].actions_for_association_links = [:show]
+  conf.columns[:latitude].options[:format] = "%6.8f"
+  conf.columns[:longitude].options[:format] = "%6.8f"
   
   conf.list.columns.exclude :note
   conf.list.sorting = {:name => 'ASC'}
