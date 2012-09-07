@@ -27,6 +27,11 @@ gem 'render_component_vho', '3.1.1'
 gem 'active_scaffold_vho', '3.1.3'
 gem 'devise'
 
+group :development do
+	gem 'taps'
+	gem 'foreman'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

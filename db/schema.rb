@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303004105) do
+ActiveRecord::Schema.define(:version => 20120906160702) do
 
   create_table "architecture_types", :force => true do |t|
     t.string    "architecture_type"
@@ -38,14 +37,14 @@ ActiveRecord::Schema.define(:version => 20120303004105) do
 
   create_table "buildings", :force => true do |t|
     t.string   "name"
-    t.decimal  "latitude"
-    t.decimal  "longitude"
     t.string   "topography"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "site_id"
     t.integer  "building_topography_id"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
     t.decimal  "lat",                    :precision => 15, :scale => 10
     t.decimal  "lng",                    :precision => 15, :scale => 10
   end
@@ -76,23 +75,23 @@ ActiveRecord::Schema.define(:version => 20120303004105) do
   end
 
   create_table "events", :force => true do |t|
-    t.integer   "begin_date"
-    t.integer   "earliest_begin_date"
-    t.integer   "latest_begin_date"
-    t.integer   "end_date"
-    t.integer   "earliest_end_date"
-    t.integer   "latest_end_date"
-    t.string    "building_type"
-    t.string    "event_type"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "building_id"
-    t.string    "note"
-    t.integer   "building_type_id"
-    t.integer   "event_type_id"
-    t.integer   "patron_type_id"
-    t.integer   "military_order_id"
-    t.integer   "patron_id"
+    t.string   "begin_date"
+    t.string   "earliest_begin_date"
+    t.string   "latest_begin_date"
+    t.string   "end_date"
+    t.string   "earliest_end_date"
+    t.string   "latest_end_date"
+    t.string   "building_type"
+    t.string   "event_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "building_id"
+    t.string   "note"
+    t.integer  "building_type_id"
+    t.integer  "event_type_id"
+    t.integer  "patron_type_id"
+    t.integer  "military_order_id"
+    t.integer  "patron_id"
   end
 
   create_table "events_patrons", :id => false, :force => true do |t|
@@ -277,5 +276,3 @@ ActiveRecord::Schema.define(:version => 20120303004105) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
-
-
