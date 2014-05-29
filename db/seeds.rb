@@ -10,7 +10,7 @@
   ArchitectureType.find_or_create_by_architecture_type o
 end
 
-'Andalucia,Extremadura,Castilla Leon,Madrid,Castilla La Mancha,Galicia,Asturias,Cantabria,La Rioja,Navarre,Aragon,Catalonia,Valencia,Murcia'.split(',').each do |o|
+'Andalucia,Extremadura,Castilla Leon,Madrid,Castilla La Mancha,Galicia,Asturias,Cantabria,La Rioja,Navarre,Aragon,Catalonia,Valencia,Murcia,Alentejo,Algarve,Centro,Lisboa,Norte'.split(',').each do |o|
   SitePrincipality.find_or_create_by_principality_name o
 end
 
